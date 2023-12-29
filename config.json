@@ -1,8 +1,8 @@
 {
     "apiKey": "",
     "profile_change": {
-        "globalname_enable": true,
-        "bio_enable": true,
+        "globalname_enable": false,
+        "bio_enable": false,
         "globalname": "Z Deliver",
         "bio": "https://discord.gg/6FsNprxMbY"
     }

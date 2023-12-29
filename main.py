@@ -70,17 +70,18 @@ def getStatus(token):
                 "inviteCode": invite_code
             }
         )
-        return req.json()['errorId']
+        return req.json()
     except:
         return 0
     
 def join(token):
     asyncio.run(changeAccountInfo(token))
     status = getStatus(token)
-    if status == 0:
+    errorId = status['errorId']
+    if errorId == 0:
         Log.info("Joined: " + token)
     else:
-        Log.error("Error: " + token)
+        Log.error(f"Error: " + token + f" {status['message']}")
 
 
 for token in tokens:
